@@ -47,7 +47,6 @@ impl<'a> BitReader<'a> {
         Some(u32::from_be_bytes(bytes))
     }
 
-
     fn byte_ix(&self) -> usize {
         self.ix / 8
     }
@@ -73,10 +72,7 @@ pub struct BitWriter {
 
 impl BitWriter {
     pub fn new() -> Self {
-        Self {
-            buf: vec![],
-            ix: 0,
-        }
+        Self { buf: vec![], ix: 0 }
     }
 
     /// Passes ownership of the internally built buffer to be used
